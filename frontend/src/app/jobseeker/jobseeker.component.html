@@ -1,0 +1,47 @@
+<!--<select *ngFor="let employer of employerList | async">
+<option value="countryname" [(ngModel)]="employer.country"></option>
+</select>-->
+<!--<div *ngFor="let employer of employerList | async">
+    <div>
+        <label>employer id:</label>{{employer.regName}}
+
+    </div>
+    <div>
+        <label>emplyer city:</label>{{employer.description}}
+    </div>
+
+</div>-->
+
+<div class="image">
+
+
+<div>
+<label>search by country and field</label>
+<form [hidden]="flag" (ngSubmit)="onSubmit()">
+     <div class="form-group">
+         <select name="country" [(ngModel)]="country">
+        <option *ngFor="let employer of employerList | async" value={{employer.country}} >{{employer.country}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <select name="field" [(ngModel)]="field" >
+        <option  value="mechanical">mechanical</option>
+        <option   value="automobile">automobile</option>
+        <option   value="real_estate">real_estate</option>
+        <option   value="petrolum">petrolum</option>
+        </select>
+    </div>
+
+    <div class="btn-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+</form>
+
+</div>
+
+<div [hidden]="!flag" *ngFor="let employer of employerbycountryandname | async" >
+  <!--  <label>{{employer.country}}</label>-->
+   <app-employerbycountryandfield [employer]='employer'></app-employerbycountryandfield> 
+</div>
+
+</div>
