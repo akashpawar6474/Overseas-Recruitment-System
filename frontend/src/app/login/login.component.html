@@ -1,0 +1,33 @@
+<div *ngIf="!loggedIn">
+    <br>
+    <br>
+    <!--<h3 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PLEASE LOGIN</h3><br>-->
+    <table align="left" >
+    <tr>
+        
+            <div>
+                <td>
+        <label>USERNAME</label></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<input [(ngModel)]="logindetails.username" placeholder="enter username"/>
+        </td>
+        </div>
+
+    </tr>
+    <tr>
+        
+    <div>
+        <td>
+        <label>PASSWORD</label>
+    </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<input [(ngModel)]="logindetails.password" placeholder="enter the password"/></td>
+
+    </div >
+    
+    </tr>
+   <tr> &nbsp;&nbsp;&nbsp;&nbsp;<button class="button is-small btn-primary" (click)='userLogin()'>LOGIN</button></tr>
+</table>
+</div>
+
+<!--<div *ngIf="loggedIn">
+    <label>{{logindetails.username}}</label>
+</div>-->
