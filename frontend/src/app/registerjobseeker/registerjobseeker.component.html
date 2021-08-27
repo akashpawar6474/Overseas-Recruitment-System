@@ -1,0 +1,232 @@
+ 
+
+<!-- 
+ 
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">register here to get services</h2>
+                </div>
+                <div class="card-body" [hidden]="submitted" style="width:200px;">
+                    
+                    <form  (ngSubmit)="OnSubmit()">
+                        <div class="form-row m-b-55">
+                            <div class="name">account details</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc" class="form-group">
+                                            <input class="input--style-5" type="text" class="form-control" id="username" required [(ngModel)]="jobseeker.username" name="username">
+                                            <label class="label--desc" for="username">username</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-2" class="form-group">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5"  type="text" class="form-control" id="password" required [(ngModel)]="jobseeker.password" name="password">
+                                            <label class="label--desc" for="password">password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Company</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="company">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Phone</div>
+                            <div class="value">
+                                <div class="row row-refine">
+                                    <div class="col-3">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="area_code">
+                                            <label class="label--desc">Area Code</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="text" name="phone">
+                                            <label class="label--desc">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Subject</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Subject 1</option>
+                                            <option>Subject 2</option>
+                                            <option>Subject 3</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Are you an existing customer?</label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">Yes
+                                    <input type="radio" checked="checked" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">No
+                                    <input type="radio" name="exist">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+</body>  -->
+ 
+
+
+
+
+
+
+
+
+    
+
+
+
+
+<div [hidden]="submitted" style="width:200px;">
+<form  (ngSubmit)="OnSubmit()">
+<div  class="form-group">
+         <label for="username">Username</label>  <input type="text" class="form-control" id="username" required [(ngModel)]="jobseeker.username" name="username">
+</div>
+
+
+<div class="form-group">
+    <label for="password">Password</label>
+    <input type="text" class="form-control" id="password" required [(ngModel)]="jobseeker.password" name="password">
+</div>
+
+
+
+<div class="form-group">
+    <label for="emailId">emailId</label>
+    <input type="text" class="form-control" id="emailId" required [(ngModel)]="jobseeker.emailId" name="emailId">
+</div>
+
+
+<div class="form-group">
+    <label for="firstName">firstName</label>
+    <input type="text" class="form-control" id="firstName" required [(ngModel)]="jobseeker.firstName" name="firstName">
+</div>
+
+
+<div class="form-group">
+    <label for="middleName">middleName</label>
+    <input type="text" class="form-control" id="middleName" required [(ngModel)]="jobseeker.middleName" name="middleName">
+</div>
+
+
+<div class="form-group">
+    <label for="lastName">lastName</label>
+    <input type="text" class="form-control" id="lastName" required [(ngModel)]="jobseeker.lastName" name="lastName">
+</div>
+
+<div class="form-group">
+    <label for="gender">gender</label>
+    <input type="text" class="form-control" id="gender" required [(ngModel)]="jobseeker.gender" name="gender">
+</div>
+
+<div class="form-group">
+    <label for="uidType">uidType</label>
+    <input type="text" class="form-control" id="uidType" required [(ngModel)]="jobseeker.uidType" name="uidType">
+</div>
+
+
+<div class="form-group">
+    <label for="uidNumber">uidNumber</label>
+    <input type="text" class="form-control" id="uidNumber" required [(ngModel)]="jobseeker.uidNumber" name="uidNumber">
+</div>
+
+
+<div class="form-group">
+    <label for="keySkills">keySkills</label>
+    <input type="text" class="form-control" id="keySkills" required [(ngModel)]="jobseeker.keySkills" name="keySkills">
+</div>
+
+<div class="form-group">
+    <label for="percentage_10th">percentage_10th</label>
+    <input type="text" class="form-control" id="percentage_10th" required [(ngModel)]="jobseeker.percentage_10th" name="percentage_10th">
+</div>
+
+<div class="form-group">
+    <label for="percentage_12th">percentage_12th</label>
+    <input type="text" class="form-control" id="percentage_12th" required [(ngModel)]="jobseeker.percentage_12th" name="percentage_12th">
+</div>
+
+<div class="form-group">
+    <label for="branch">branch of engg</label>
+    <input type="text" class="form-control" id="branch" required [(ngModel)]="jobseeker.branch" name="branch">
+</div>
+
+<div class="form-group">
+    <label for="pecentage_grad">graduation percentage</label>
+    <input type="text" class="form-control" id="pecentage_grad" required [(ngModel)]="jobseeker.pecentage_grad" name="pecentage_grad">
+</div>
+
+
+<div class="form-group">
+    <label for="passOutYear">graduation passOutYear</label>
+    <input type="text" class="form-control" id="passOutYear" required [(ngModel)]="jobseeker.passOutYear" name="passOutYear">
+</div>
+
+<button type="submit" class="btn btn-success">Submit</button>
+
+</form>
+</div>
+
+
+
+<div [hidden]="!submitted">
+    <h4>jobseeker submitted successfully!</h4>
+    <button class="btn btn-success" (click)="newJobseeker()">Add</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
