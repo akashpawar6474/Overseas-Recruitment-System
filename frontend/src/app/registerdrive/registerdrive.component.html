@@ -1,0 +1,40 @@
+<!--<h4>Build relationship and unlock the opprtunities</h4>-->
+
+<div [hidden]="submitted" style="width:200px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="jobRole">jobRole</label>
+            <input type="text" class="form-control" id="jobRole" required [(ngModel)]="drive.jobRole" name="jobRole">
+        </div>
+        <div class="form-group">
+            <label for="jobLocation">jobLocation</label>
+            <input type="text" class="form-control" id="jobLocation" required [(ngModel)]="drive.jobLocation" name="jobLocation">
+        </div>
+        <div class="form-group">
+            <label for="natureOfJob">natureOfJob</label>
+            <input type="text" class="form-control" id="natureOfJob" [(ngModel)]="drive.natureOfJob" name="natureOfJob" placeholder="full_or_part_time">
+        </div>
+        <div class="form-group">
+            <label for="shift">shift</label>
+            <input type="text" class="form-control" id="shift" [(ngModel)]="drive.shift" name="shift" placeholder="morning_evening">
+        </div>
+        <div>
+            <label for="examDate">examdate</label>
+            <input type="date" class="form-control" id="examDate" [(ngModel)]="drive.examDate" name="examDate">
+        </div>
+       
+        <div class="form-group">
+            <label for="examUrl">examUrl</label>
+            <input type="text" class="form-control" id="examUrl" [(ngModel)]="drive.examUrl" name="examUrl">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+
+
+<div [hidden]="!submitted">
+    <h4>Drive added successfully!</h4>
+    <button class="btn btn-success" (click)="newDrives()">Add</button>
+  </div>
